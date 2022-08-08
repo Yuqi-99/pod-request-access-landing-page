@@ -21,6 +21,7 @@ import applePodcast from './images/apple-podcast.svg';
 import googlePodcasts from './images/google-podcasts.svg';
 import pocketCasts from './images/pocket-casts.svg';
 import imageHost from './images/image-host.jpg';
+import smallImg from './images/small-image-host.jpg';
 import dotImg from './images/bg-pattern-dots.svg';
 import { useState } from 'react';
 import validator from 'validator';
@@ -29,97 +30,110 @@ function App(){
   const [emailError, setEmailError] = useState('')
   const validateEmail = (e) => {
     var email = e.target.value
-    if (email){
-      if (validator.isEmail(email)) {
-        setEmailError('');
-      } 
-      else {
-        setEmailError('Oops!Please check your email');
-      }
-    }
-    else{
+    if (email !== '' && validator.isEmail(email)){
+      setEmailError('');
+    } else if (email === ''){
       setEmailError('Oops!Please add your email');
+    } else {
+      setEmailError('Oops!Please check your email');
     }
   }
-
+// fontSize={{ base: '24px', md: '40px', lg: '56px' }}>
   return (
-    <Stack bgColor= 'brand.bg'> 
+    <Stack bgColor= 'brand.bg'
+      height={['1030px','950px','1050px','auto']}
+      width={['100%','100%','100%','100%']}> 
       <Flex>
         <Box flex='1' 
-           height='580px'
+           height={['20px','20px','750px','540px']}
            bgColor= 'brand.bg'
+           marginTop= {['','','0px','120px']}
            marginY='120px'
-           marginLeft='120px'
+           marginLeft={['','','0px','120px']}
            >
             <Flex>
               <Image flex='1'
                 bgSize='cover'
                 bgRepeat='no-repeat' 
                 position='absolute' 
-                htmlWidth='800px'
-                marginLeft='340px'
+                w={['0%','0%','0%','750px']}
+                marginLeft='390px'
+                marginRight='0px'
                 src={imageHost} 
+              />
+            </Flex>  
+            <Flex>
+              <Image flex='1'
+                bgSize='cover'
+                bgRepeat='no-repeat' 
+                position='absolute' 
+                w={['0%','0%','470px','0%']}
+                marginLeft='300px'
+                src={smallImg} 
               />
             </Flex>  
         </Box>
       </Flex>
       <Flex>
-        <Box marginTop='-180px'>
+        <Box marginTop={['0px','-100px','30px','-180px']}>
           <Image position='absolute' 
-            marginLeft='1030px'
+            marginLeft={['','','0px','1000px']}
+            w={['0%','0%','250px','250px']}
             src={dotImg} 
           />
           <Image position='absolute' 
-            marginTop='-560px'
-            marginLeft='150px'
+            marginTop={['-190px','-100px','-840px','-515px']}
+            marginLeft={['120px','180px','30px','150px']}
             src={logo} />
         </Box> 
       </Flex>
       <Flex>
         {/* Box before title and content */}
         <Box position='absolute'
-           marginTop='-586px' 
-           marginLeft='155px'
+           marginTop={['-130px','-130px','-630px','-586px']} 
+           marginLeft={['15px','15px','15px','155px']}
            height='450px'
-           width='590px'
+           width={['10px','590px','590px','590px']}
            bgColor= 'brand.bg'
            >
             {/* Box for show title and content  */}
             <Box position='absolute' 
               bgColor='brand.bg'
               marginTop='70px' 
-              marginLeft='0px'
+              marginLeft={['-10px','-8px','0px','0px']}
               height='380px'
-              width='590px'
+              width={['400px','570px','590px','630px']}
               > 
-                <Text fontSize='45px'
+                <Text fontSize={['30px','43px','45px','45px']}
                   color='brand.txt' 
                   textTransform = 'uppercase'
                   fontFamily='fonts.heading'
-                  fontWeight='light'
+                  marginLeft={['15px','15px','0%','0%']}
                   >
                     Publish your podcasts
                 </Text>
-                <Text fontSize='45px' 
+                <Text fontSize={['30px','43px','45px','45px']} 
                   color='white' 
                   textTransform ='uppercase'
                   fontFamily='fonts.heading'
-                  fontWeight='light'
+                  marginLeft={['90px','90px','0%','0%']}
+                  marginTop={['5px','5px','0%','0%']}
                   > 
                   everywhere.
                 </Text>
                 {/* Box to hold the content */}
                 <Box position='absolute'
                   bgColor='brand.bg'
-                  marginTop='20px' 
-                  marginLeft='0px'
-                  height='80px'
-                  width='450px'
+                  marginTop={['30px','30px','20px','20px']} 
+                  marginLeft={['35px','35px','0px','0px']}
+                  height={['100px','100px','80px','80px']}
+                  width={['330px','330px','450px','450px']}
                 >
-                  <Text fontSize='18px' 
+                  <Text fontSize={['15px','15px','18px','18px']} 
                     color='brand.content'
                     fontWeight='light'
                     fontFamily='fonts.body'
+                    textAlign={['center','center','left','left']}
                   > 
                     Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!
                   </Text>
@@ -127,23 +141,39 @@ function App(){
                 {/* Box for four icon below */}
                 <Box position='absolute'
                   bgColor='brand.bg'
-                  marginTop='217px' 
-                  marginLeft='0px'
+                  marginTop={['170px','170px','217px','217px']} 
+                  marginLeft={['8px','8px','0px','0px']}
                   height='30px'
-                  width='450px'
+                  width={['380px','420px','450px','450px']}
                 >
-                  <Stack direction={['column', 'row']} spacing='24px'>
-                    <Box w='96px' h='29px' opacity='0.5'>
-                      <Image htmlHeight='29px' htmlWidth='96px' src={spotifyLogo}/>
+                  <Stack direction={['row']} spacing={['15px','20px','24px','24px']}>
+                    <Box w={['75px','75px','96px','96px']} 
+                      h='29px' 
+                      opacity='0.5'>
+                      <Image htmlHeight='29px' 
+                        htmlWidth='96px' 
+                        src={spotifyLogo}/>
                     </Box>
-                    <Box w='78px' h='29px' opacity='0.5'>
-                      <Image htmlHeight='29px' htmlWidth='78px' src={applePodcast}/>
+                    <Box w={['60px','60px','78px','78px']} 
+                      h='29px' 
+                      opacity='0.5'>
+                      <Image htmlHeight='29px' 
+                        htmlWidth='78px' 
+                        src={applePodcast}/>
                     </Box>
-                    <Box w='125px' h='29px' opacity='0.5'>
-                      <Image htmlHeight='29px' htmlWidth='125px' src={googlePodcasts}/>
+                    <Box w={['100px','100px','125px','125px']} 
+                      h='29px' 
+                      opacity='0.5'>
+                      <Image htmlHeight='29px' 
+                        htmlWidth='125px' 
+                        src={googlePodcasts}/>
                     </Box>
-                    <Box w='129px' h='29px' opacity='0.5'>
-                      <Image htmlHeight='29px' htmlWidth='129px' src={pocketCasts}/> 
+                    <Box w={['102px','102px','129px','129px']} 
+                      h='29px' 
+                      opacity='0.5'>
+                      <Image htmlHeight='29px' 
+                        htmlWidth='129px' 
+                        src={pocketCasts}/> 
                     </Box>
                   </Stack>
 
@@ -151,21 +181,23 @@ function App(){
                 {/* Box to handle email input section */}
                 <Box position='absolute'
                   bgColor='brand.bg'
-                  marginTop='125px' 
-                  marginLeft='0px'
+                  marginTop={['200px','200px','125px','125px']} 
+                  marginLeft={['3px','10px','0px','0px']}
                   height='56px'
-                  width='427px'
+                  width={['380px','400px','427px','427px']}
                 >
                   <InputGroup>
-                    <FormControl marginTop='2px'>
+                    <FormControl marginTop={['100px','100px','2px','2px']}
+                    onChange={(e) => validateEmail(e)}
+                    >
                       <Input type='email'
-                        height='56px' 
+                        height={['75px','75px','56px','56px']}
+                        marginTop={['-50px','-50px','0%','0%']} 
                         bgColor='brand.emailHolder'
                         color='brand.content'
                         border='none' 
                         borderRadius='30px' 
                         placeholder='Email address'
-                        onChange={(e) => validateEmail(e)}
                         />
                     </FormControl>
                     {/* make the button a part of the inputbar */}
@@ -175,13 +207,13 @@ function App(){
                           borderRadius='30px'
                           bgColor='brand.txt'
                           _hover={{bg:'brand.btnHover'}}
-                          fontSize='12px'
+                          fontSize={['16px','18px','12px','12px']}
                           position='absolute'
-                          marginTop='20px'
-                          marginLeft='-110px'
-                          height='45px'
-                          width='140px'
-                          
+                          marginTop={['390px','390px','20px','20px']}
+                          marginLeft={['-330px','-350px','-110px','-110px']}
+                          height={['75px','75px','45px','45px']}
+                          width={['380px','400px','140px','140px']}
+                          onChange={(e) => validateEmail(e)}
                           > Request Access
                         </Button>
                     </InputRightElement>
@@ -199,14 +231,6 @@ function App(){
         </Box> 
       </Flex>
     </Stack>
-    
-    
-    
-      
-    
-    
-
-
   );
 }
 
