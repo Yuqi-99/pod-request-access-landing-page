@@ -41,7 +41,7 @@ function App(){
 // fontSize={{ base: '24px', md: '40px', lg: '56px' }}>
   return (
     <Stack bgColor= 'brand.bg'
-      height={['1030px','950px','1050px','auto']}
+      height={['950px','950px','1050px','auto']}
       width={['100%','100%','100%','100%']}> 
       <Flex>
         <Box flex='1' 
@@ -83,7 +83,7 @@ function App(){
           />
           <Image position='absolute' 
             marginTop={['-190px','-100px','-840px','-515px']}
-            marginLeft={['120px','180px','30px','150px']}
+            marginLeft={['105px','180px','30px','150px']}
             src={logo} />
         </Box> 
       </Flex>
@@ -93,22 +93,22 @@ function App(){
            marginTop={['-130px','-130px','-630px','-586px']} 
            marginLeft={['15px','15px','15px','155px']}
            height='450px'
-           width={['10px','590px','590px','590px']}
+           width={['95%','590px','590px','590px']}
            bgColor= 'brand.bg'
            >
             {/* Box for show title and content  */}
             <Box position='absolute' 
               bgColor='brand.bg'
               marginTop='70px' 
-              marginLeft={['-10px','-8px','0px','0px']}
+              marginLeft={['-15px','-8px','0px','0px']}
               height='380px'
-              width={['400px','570px','590px','630px']}
+              width={['100%','570px','590px','630px']}
               > 
-                <Text fontSize={['30px','43px','45px','45px']}
+                <Text fontSize={['27px','43px','45px','45px']}
                   color='brand.txt' 
                   textTransform = 'uppercase'
                   fontFamily='fonts.heading'
-                  marginLeft={['15px','15px','0%','0%']}
+                  marginLeft={['20px','15px','0%','0%']}
                   >
                     Publish your podcasts
                 </Text>
@@ -125,7 +125,7 @@ function App(){
                 <Box position='absolute'
                   bgColor='brand.bg'
                   marginTop={['30px','30px','20px','20px']} 
-                  marginLeft={['35px','35px','0px','0px']}
+                  marginLeft={['25px','35px','0px','0px']}
                   height={['100px','100px','80px','80px']}
                   width={['330px','330px','450px','450px']}
                 >
@@ -144,7 +144,7 @@ function App(){
                   marginTop={['170px','170px','217px','217px']} 
                   marginLeft={['8px','8px','0px','0px']}
                   height='30px'
-                  width={['380px','420px','450px','450px']}
+                  width={['100%','420px','450px','450px']}
                 >
                   <Stack direction={['row']} spacing={['15px','20px','24px','24px']}>
                     <Box w={['75px','75px','96px','96px']} 
@@ -179,12 +179,12 @@ function App(){
 
                 </Box>
                 {/* Box to handle email input section */}
-                <Box position='absolute'
+                <Box 
                   bgColor='brand.bg'
                   marginTop={['200px','200px','125px','125px']} 
-                  marginLeft={['3px','10px','0px','0px']}
-                  height='56px'
-                  width={['380px','400px','427px','427px']}
+                  marginLeft={['5px','10px','0px','0px']}
+                  height={['100%','','56px','56px']}
+                  width={['100%','400px','427px','427px']}
                 >
                   <InputGroup>
                     <FormControl marginTop={['100px','100px','2px','2px']}
@@ -192,7 +192,9 @@ function App(){
                     >
                       <Input type='email'
                         height={['75px','75px','56px','56px']}
-                        marginTop={['-50px','-50px','0%','0%']} 
+                        width={['95%','100%','100%','100%']}
+                        marginTop={['-50px','-50px','0%','0%']}
+                        marginLeft={['15px','15px','0%','0%']} 
                         bgColor='brand.emailHolder'
                         color='brand.content'
                         border='none' 
@@ -210,9 +212,9 @@ function App(){
                           fontSize={['16px','18px','12px','12px']}
                           position='absolute'
                           marginTop={['390px','390px','20px','20px']}
-                          marginLeft={['-330px','-350px','-110px','-110px']}
+                          marginLeft={['-310px','-300px','-110px','-110px']}
                           height={['75px','75px','45px','45px']}
-                          width={['380px','400px','140px','140px']}
+                          width={['850%','850%','140px','140px']}
                           onChange={(e) => validateEmail(e)}
                           > Request Access
                         </Button>
