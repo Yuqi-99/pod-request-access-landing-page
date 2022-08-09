@@ -56,8 +56,8 @@ function App(){
                 bgSize='cover'
                 bgRepeat='no-repeat' 
                 position='absolute' 
-                w={['0%','0%','0%','750px']}
-                marginLeft='390px'
+                w={['0%','0%','0%','57%']}
+                marginLeft='300px'
                 marginRight='0px'
                 src={imageHost} 
               />
@@ -75,14 +75,14 @@ function App(){
         </Box>
       </Flex>
       <Flex>
-        <Box marginTop={['0px','-100px','30px','-180px']}>
+        <Box marginTop={['0px','-100px','30px','-220px']}>
           <Image position='absolute' 
-            marginLeft={['','','0px','1000px']}
-            w={['0%','0%','250px','250px']}
+            marginLeft={['','','0px','750px']}
+            w={['0%','0%','250px','25%']}
             src={dotImg} 
           />
           <Image position='absolute' 
-            marginTop={['-190px','-100px','-840px','-515px']}
+            marginTop={['-190px','-100px','-840px','-480px']}
             marginLeft={['105px','180px','30px','150px']}
             src={logo} />
         </Box> 
@@ -93,7 +93,7 @@ function App(){
            marginTop={['-130px','-130px','-630px','-586px']} 
            marginLeft={['15px','15px','15px','155px']}
            height='450px'
-           width={['95%','590px','590px','590px']}
+           width={['95%','590px','590px','550px']}
            bgColor= 'brand.bg'
            >
             {/* Box for show title and content  */}
@@ -102,21 +102,21 @@ function App(){
               marginTop='70px' 
               marginLeft={['-15px','-8px','0px','0px']}
               height='380px'
-              width={['100%','570px','590px','630px']}
+              width={['100%','570px','590px','550px']}
               > 
-                <Text fontSize={['27px','43px','45px','45px']}
+                <Text fontSize={['25px','43px','45px','40px']}
                   color='brand.txt' 
                   textTransform = 'uppercase'
                   fontFamily='fonts.heading'
-                  marginLeft={['20px','15px','0%','0%']}
+                  marginLeft={['25px','15px','0%','0%']}
                   >
                     Publish your podcasts
                 </Text>
-                <Text fontSize={['30px','43px','45px','45px']} 
+                <Text fontSize={['25px','43px','45px','40px']} 
                   color='white' 
                   textTransform ='uppercase'
                   fontFamily='fonts.heading'
-                  marginLeft={['90px','90px','0%','0%']}
+                  marginLeft={['95px','90px','0%','0%']}
                   marginTop={['5px','5px','0%','0%']}
                   > 
                   everywhere.
@@ -125,11 +125,11 @@ function App(){
                 <Box position='absolute'
                   bgColor='brand.bg'
                   marginTop={['30px','30px','20px','20px']} 
-                  marginLeft={['25px','35px','0px','0px']}
+                  marginLeft={['18px','35px','0px','0px']}
                   height={['100px','100px','80px','80px']}
                   width={['330px','330px','450px','450px']}
                 >
-                  <Text fontSize={['15px','15px','18px','18px']} 
+                  <Text fontSize={['15px','15px','18px','16px']} 
                     color='brand.content'
                     fontWeight='light'
                     fontFamily='fonts.body'
@@ -212,9 +212,9 @@ function App(){
                           fontSize={['16px','18px','12px','12px']}
                           position='absolute'
                           marginTop={['390px','390px','20px','20px']}
-                          marginLeft={['-310px','-300px','-110px','-110px']}
+                          marginLeft={['-290px','-300px','-110px','-110px']}
                           height={['75px','75px','45px','45px']}
-                          width={['850%','850%','140px','140px']}
+                          width={['800%','850%','140px','140px']}
                           onChange={(e) => validateEmail(e)}
                           > Request Access
                         </Button>
