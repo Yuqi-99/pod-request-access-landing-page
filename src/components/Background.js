@@ -10,7 +10,7 @@ import smallImg from '../images/small-image-host.jpg';
 const Background = () => {
     return ( 
         <Flex>
-        <Box flex='1' 
+        <Box 
            height={['20px','20px','750px','540px']}
            bgColor= 'brand.bg'
            marginTop= {['','','0px','120px']}

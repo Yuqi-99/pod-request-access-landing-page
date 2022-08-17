@@ -26,7 +26,7 @@ function App(){
   return (
     <Stack 
       bgColor= 'brand.bg'
-      height={['950px','950px','1025px','auto']}
+      height={['calc(110vh)','calc(100vh)','calc(133vh)','calc(100vh)']}
       width={['100%','100%','100%','100%']}
     > 
       <Background />
@@ -38,17 +38,16 @@ function App(){
           marginTop={['-130px','-130px','-630px','-586px']} 
           marginLeft={['15px','15px','15px','155px']}
           height='450px'
-          width={['95%','590px','590px','550px']}
+          width={['95%','95%','590px','550px']}
           bgColor= 'brand.bg'
         >
             {/* Box for show title and content  */}
             <Box 
-              position='absolute' 
               bgColor='brand.bg'
               marginTop='70px' 
-              marginLeft={['-15px','-8px','0px','0px']}
-              height='380px'
-              width={['100%','570px','590px','550px']}
+              align={['center','center','none','none']}
+              height={['220px','200px','380px','380px']}
+              width={['100%','100%','590px','550px']}
             > 
                 <Title />
                 <Content />
@@ -57,22 +56,19 @@ function App(){
                 {/* Box to handle email input section */}
                 <Box 
                   bgColor='brand.bg'
-                  marginTop={['200px','200px','125px','125px']} 
-                  marginLeft={['5px','10px','0px','0px']}
-                  height={['100%','','56px','56px']}
-                  width={['100%','400px','427px','427px']}
+                  marginTop={['100px','240px','20px','50px']} 
+                  marginLeft={['0','0','0px','0px']}
+                  width={['100%','100%','427px','427px']}
                 >
                   <InputGroup>
                     <FormControl 
-                      marginTop={['100px','100px','2px','2px']}
                       onChange={(e) => validateEmail(e)}
                     >
                       <Input 
                         type='email'
-                        height={['75px','75px','56px','56px']}
-                        width={['95%','100%','100%','100%']}
-                        marginTop={['-50px','-50px','0%','0%']}
-                        marginLeft={['15px','15px','0%','0%']} 
+                        height={['65px','65px','56px','56px']}
+                        width={['95%','95%','100%','100%']}
+                        marginLeft={['10px','10px','0%','0%']} 
                         bgColor='brand.emailHolder'
                         color='brand.content'
                         border='none' 
@@ -84,21 +80,35 @@ function App(){
                     <InputRightElement> 
                     {/* Request button */}
                       <Button 
+                        display={['none','none','block','block']}
                         border='none' 
                         borderRadius='30px'
                         bgColor='brand.txt'
                         _hover={{bg:'brand.btnHover'}}
-                        fontSize={['16px','18px','12px','12px']}
-                        position='absolute'
-                        marginTop={['390px','390px','20px','20px']}
-                        marginLeft={['-290px','-300px','-110px','-110px']}
-                        height={['75px','75px','45px','45px']}
-                        width={['800%','850%','140px','140px']}
+                        fontSize='12px'
+                        marginTop='15px'
+                        marginLeft='-110px'
+                        height='45px'
+                        width='140px'
                         onChange={(e) => validateEmail(e)}
                       > Request Access
                       </Button>
                     </InputRightElement>
                   </InputGroup>
+                    <Button 
+                        display={['block','block','none','none']}
+                        border='none' 
+                        borderRadius='30px'
+                        bgColor='brand.txt'
+                        _hover={{bg:'brand.btnHover'}}
+                        fontSize='16px'
+                        height='65px'
+                        width='95%'
+                        marginLeft='10px'
+                        marginTop='5'
+                        onChange={(e) => validateEmail(e)}
+                      > Request Access
+                      </Button>
                   <Text 
                     fontSize='11px'
                     marginTop='5px'

@@ -1,6 +1,6 @@
 // 1. Import `extendTheme`
 import { extendTheme } from "@chakra-ui/react"
-import "@fontsource/chivo";
+import "@fontsource/chivo/300.css";
 import "@fontsource/open-sans";
 // 2. Call `extendTheme` and pass your custom values
 const theme = extendTheme({

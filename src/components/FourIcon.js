@@ -13,10 +13,10 @@ const FourIcon = () => {
     return ( 
             <Box position='absolute'
                 bgColor='brand.bg'
-                marginTop={['170px','170px','217px','217px']} 
-                marginLeft={['8px','8px','0px','0px']}
+                marginTop={['20px','20px','120px','170px']} 
+                align={['center','center','none','none']}
                 height='30px'
-                width={['100%','420px','450px','450px']}
+                width={['95%','100%','450px','450px']}
             >
                 <Stack direction={['row']} spacing={['15px','20px','24px','24px']}>
                 <Box w={['75px','75px','96px','96px']} 
