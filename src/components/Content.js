@@ -7,11 +7,11 @@ import {
 const Content = () => {
     return ( 
         <Box
-            bgColor='brand.bg'
+            bgColor='brand,bg'
             marginTop={['30px','30px','20px','20px']} 
-            align={['center','center','none','none']}
             height={['100px','100px','80px','80px']}
-            width={['100%','330px','450px','450px']}
+            width={['100%','100%','450px','450px']}
+            marginX='-1'
         >
             <Text fontSize={['15px','15px','18px','16px']} 
                 color='brand.content'

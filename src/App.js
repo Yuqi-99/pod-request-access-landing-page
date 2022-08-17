@@ -26,8 +26,8 @@ function App(){
   return (
     <Stack 
       bgColor= 'brand.bg'
-      height={['calc(110vh)','calc(100vh)','calc(133vh)','calc(100vh)']}
-      width={['100%','100%','100%','100%']}
+      height={['calc(110vh)','calc(120vh)','calc(133vh)','calc(100vh)']}
+      width={['100.5%','100%','100%','100%']}
     > 
       <Background />
       <Logo />
@@ -44,7 +44,7 @@ function App(){
             {/* Box for show title and content  */}
             <Box 
               bgColor='brand.bg'
-              marginTop='70px' 
+              marginTop='60px' 
               align={['center','center','none','none']}
               height={['220px','200px','380px','380px']}
               width={['100%','100%','590px','550px']}
@@ -56,12 +56,12 @@ function App(){
                 {/* Box to handle email input section */}
                 <Box 
                   bgColor='brand.bg'
-                  marginTop={['100px','240px','20px','50px']} 
-                  marginLeft={['0','0','0px','0px']}
+                  marginTop={['70px','70px','20px','50px']} 
                   width={['100%','100%','427px','427px']}
                 >
                   <InputGroup>
-                    <FormControl 
+                    <FormControl
+                      display={['none','none','block','block']} 
                       onChange={(e) => validateEmail(e)}
                     >
                       <Input 
@@ -95,6 +95,43 @@ function App(){
                       </Button>
                     </InputRightElement>
                   </InputGroup>
+                  <Text 
+                      display={['none','none','block','block']}
+                      fontSize='11px'
+                      marginTop='5px'
+                      marginLeft='18px'
+                      color='red'
+                      fontWeight='light'
+                      fontFamily='fonts.body'
+                    >
+                    {emailError}</Text>
+
+                    {/* for mobile phone */}
+                  <FormControl 
+                      display={['block','block','none','none']}
+                      onChange={(e) => validateEmail(e)}
+                    >
+                      <Input 
+                        type='email'
+                        height='65px'
+                        width={['97%','100%']}
+                        align='center'
+                        bgColor='brand.emailHolder'
+                        color='brand.content'
+                        border='none' 
+                        borderRadius='30px' 
+                        placeholder='Email address'
+                      />
+                    </FormControl>
+                    <Text 
+                      display={['block','block','none','none']}
+                      fontSize='11px'
+                      marginTop='2px'
+                      color='red'
+                      fontWeight='light'
+                      fontFamily='fonts.body'
+                    >
+                    {emailError}</Text>
                     <Button 
                         display={['block','block','none','none']}
                         border='none' 
@@ -103,21 +140,12 @@ function App(){
                         _hover={{bg:'brand.btnHover'}}
                         fontSize='16px'
                         height='65px'
-                        width='95%'
-                        marginLeft='10px'
-                        marginTop='5'
+                        width={['97%','100%']}
+                        align='center'
+                        marginTop={['4','7']}
                         onChange={(e) => validateEmail(e)}
                       > Request Access
                       </Button>
-                  <Text 
-                    fontSize='11px'
-                    marginTop='5px'
-                    marginLeft='18px'
-                    color='red'
-                    fontWeight='light'
-                    fontFamily='fonts.body'
-                  >
-                    {emailError}</Text>
                 </Box>
             </Box>
         </Box> 

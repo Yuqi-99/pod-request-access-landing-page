@@ -19,13 +19,13 @@ const Logo = () => {
           />
           <Image
             marginTop={['-190px','-100px','-840px','-480px']}
-            marginLeft={['105px','180px','30px','150px']}
+            marginLeft={['105px','105px','30px','150px']}
             align={['center','center','none','none']}
             src={logo} />
         </Box>
           <Box display={['block','block','none','none']}>
             <Image
-              marginTop={['-190px','-100px','-840px','-480px']}
+              marginTop={['-190px','-190px','-840px','-480px']}
               src={logo} />
           </Box> 
         

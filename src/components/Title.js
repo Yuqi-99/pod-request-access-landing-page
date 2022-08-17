@@ -6,12 +6,13 @@ import {
 
 const Title = () => {
     return ( 
-        <Box>
+        <Box marginLeft='-3'>
             <Text fontSize={['24px','30px','45px','40px']}
                 color='brand.txt' 
                 textTransform = 'uppercase'
                 fontFamily='fonts.heading'
                 align={['center','center','left','left']}
+                
             >
                 Publish your podcasts
             </Text>
